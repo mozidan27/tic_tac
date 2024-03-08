@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -147,6 +148,12 @@ class _HomePageState extends State<HomePage> {
     '',
   ];
   var myTextStyle = const TextStyle(color: Colors.white, fontSize: 30);
+
+  // static var myNewFont = GoogleFonts.pressStart2p(
+  //     textStyle: const TextStyle(color: Colors.black, letterSpacing: 3));
+  static var myNewFontWhite = GoogleFonts.pressStart2p(
+      textStyle:
+          const TextStyle(color: Colors.white, letterSpacing: 3, fontSize: 15));
   int exScore = 0;
   int ohScore = 0;
   int filledBoxes = 0;
@@ -164,33 +171,33 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(30),
+                      padding: const EdgeInsets.all(25),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'Player X',
-                            style: myTextStyle,
+                            style: myNewFontWhite,
                           ),
                           Text(
                             exScore.toString(),
-                            style: myTextStyle,
+                            style: myNewFontWhite,
                           ),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(30),
+                      padding: const EdgeInsets.all(25),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             'Player O',
-                            style: myTextStyle,
+                            style: myNewFontWhite,
                           ),
                           Text(
                             ohScore.toString(),
-                            style: myTextStyle,
+                            style: myNewFontWhite,
                           ),
                         ],
                       ),
@@ -228,7 +235,26 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            Expanded(child: Container())
+            Expanded(
+                child: Container(
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'TIC TAC TOE',
+                      style: myNewFontWhite,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'MOHAMED ZIDAN',
+                      style: myNewFontWhite,
+                    )
+                  ],
+                ),
+              ),
+            ))
           ],
         ),
       ),

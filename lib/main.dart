@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac/screens/home_page.dart';
+import 'package:tic_tac/screens/welcome_screen.dart';
 
 void main() {
   runApp(const TicTak());
@@ -12,7 +12,7 @@ class TicTak extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: WelcomeScreen(),
     );
   }
 }
